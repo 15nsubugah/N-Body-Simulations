@@ -1,0 +1,246 @@
+html{
+  /* Allows for smooth transition between different sections of the page */
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #333;
+  margin: 0;
+}
+
+/* Navigation menu */
+nav{
+  background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1));
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  z-index: 100;
+  align-items: center;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.7);
+}
+
+/* The style for the links to the start and bottom parts of the page */
+nav h1 a{
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px;
+}
+
+nav a{
+  text-decoration: none;
+  color: #fff;
+  margin-left: 635px;
+  margin-right: 10px;
+}
+
+
+
+
+header{
+  width: 100%;
+  height: 100vh;
+}
+
+
+/*background*/
+.bg{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),
+  url("https://cdn.dribbble.com/users/43762/screenshots/1438974/media/2a87a13fdadaffa725137d051409f13a.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.bg h1{
+  text-align: top; 
+}
+
+.content{
+  width: 90%;
+  height: 75%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Both columns and their parts*/
+.column{
+  margin: 10px;
+  width: 45%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.column:hover{
+  width: 48%;
+  height:  100%;
+}
+
+/* The columns are split into 3 different segments: Upper, middle and lower */
+.column .upper{
+  width: 100%;
+  height: 60%;
+  background: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column .upper img{
+  width: 100%;
+  height: 100%;
+}
+
+.column .middle{
+  width: 100%;
+  height: 10%;
+  background: #95afc0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style of the link to the simulations inside the columns */
+.middle a{
+  text-decoration: none;
+  color: black;
+}
+
+.column .lower{
+  width: 100%;
+  height: 30%;
+  background: #dfe6e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column .lower p{
+  width: 80%;
+  height: auto;
+  text-align: center;
+}
+
+/*FOOTER*/
+
+footer{
+  height: 100vh;
+  width: 100%;
+  /* The position property allows the footer to be adjusted and moved as the user scrolls up and down the page near the bottom. */
+  position: relative;
+}
+
+.bgf{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+  url("BGF.gif");
+  /* Same as the other background in the header section of the website */ 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentf{
+  width: 100%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contentf .upper{
+  height: 20%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contentf .lower{
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title{
+  overflow:  hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paragraphf{
+  overflow: hidden;
+  height: 100%;
+  width: 90%;
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer .bgf .contentf .lower .paragraphf p{
+  font-size: medium;
+  color: white;
+}
+
+@counter-style repeating-emoji {
+  system: cyclic;
+  symbols: "\1FA90";
+  suffix: " ";
+}
+
+ul{
+  list-style-type: repeating-emoji;
+}
+
+footer .bgf .contentf .lower .paragraphf p ul li{
+  font-size: small;
+  color: white;
+}
+
+
+
+a{
+  color: purple;
+}
+
+/* The Preloader for website */
+#preloader{
+  background: url(Preloader.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  /* The use of the 'z-index' here being 101 means that it takes precedence before 
+  the actual menu itself to prevent the preloader to appear at the same time as the menu screen */
+  z-index: 101;
+}              
+
